@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASP Annual Events Schedule 2026</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 9999px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col">
+
+    <!-- Header & Hero Section -->
+    <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wide uppercase mb-3 border border-indigo-500/30">
+                        <i class="fa-solid fa-calendar-star"></i> Annual Celebrations 2026
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                        ASP Kreedothsav & Kala Taranga November 2026! 🏆
+                    </h1>
+                    <div class="mt-2 flex items-center gap-2 text-xs text-indigo-300">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>Last Updated: <strong class="text-white font-medium">01-Nov-2026</strong></span>
+                    </div>
+                    <p class="mt-2 text-slate-300 max-w-xl text-sm sm:text-base">
+                        Explore schedules, fixtures, cultural competitions, and grand celebration events. Join in and support your teams!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+
+        <!-- Controls Bar: Search, Category Filter & View Toggle -->
+        <div class="bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-slate-200/80 mb-8 flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
+            
+            <!-- Search Input -->
+            <div class="relative flex-1">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" id="search-input" placeholder="Search by event name or organizer..."
+                    class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all">
+            </div>
+
+            <!-- Filters & Views -->
+            <div class="flex flex-wrap items-center justify-between lg:justify-end gap-3">
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap items-center gap-1.5 bg-slate-100 p-1 rounded-xl" id="category-filters">
+                    <button data-cat="all" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-indigo-600 shadow-sm">All</button>
+                    <button data-cat="Sports" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-600 hover:text-slate-900">Sports</button>
+                    <button data-cat="Cultural" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-600 hover:text-slate-900">Cultural</button>
+                    <button data-cat="Fun" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-600 hover:text-slate-900">Fun & Games</button>
+                    <button data-cat="Grand Event" class="cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-600 hover:text-slate-900">Grand Event</button>
+                </div>
+
+                <!-- View Switcher -->
+                <div class="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200">
+                    <button id="btn-grid-view" title="Grid View" class="px-3 py-1.5 rounded-lg text-xs font-medium bg-white text-slate-800 shadow-sm transition-all">
+                        <i class="fa-solid fa-border-all mr-1"></i> Grid
+                    </button>
+                    <button id="btn-table-view" title="Table View" class="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-all">
+                        <i class="fa-solid fa-list mr-1"></i> Table
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dynamic Results Counter -->
+        <div class="flex justify-between items-center mb-6 px-1">
+            <p class="text-sm font-medium text-slate-500">
+                Showing <span id="visible-count" class="font-bold text-slate-800">13</span> of 13 events
+            </p>
+        </div>
+
+        <!-- Grid View Container -->
+        <div id="grid-view" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic JS rendering cards here -->
+        </div>
+
+        <!-- Table View Container (Hidden by default) -->
+        <div id="table-view" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="overflow-x-auto custom-scrollbar">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-50 border-b border-slate-200 text-xs font-semibold text-slate-500 uppercase tracking-wider">
+                            <th class="py-4 px-6">Event</th>
+                            <th class="py-4 px-6">Category</th>
+                            <th class="py-4 px-6">Date</th>
+                            <th class="py-4 px-6">Organizer(s)</th>
+                            <th class="py-4 px-6">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body" class="divide-y divide-slate-100 text-sm">
+                        <!-- Dynamic JS rendering table rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Empty State Message -->
+        <div id="empty-state" class="hidden text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 mt-4">
+            <div class="w-16 h-16 bg-indigo-50 text-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                <i class="fa-solid fa-calendar-xmark"></i>
+            </div>
+            <h3 class="text-base font-semibold text-slate-800">No matching events found</h3>
+            <p class="text-slate-500 text-sm mt-1">Try adjusting your search terms or filters.</p>
+            <button id="reset-filters-btn" class="mt-4 px-4 py-2 bg-indigo-50 hover:bg-indigo-100 text-indigo-600 font-semibold text-xs rounded-xl transition-all">
+                Reset All Filters
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 ASP Events Committee • Designed for smooth event coordination</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Event Data Array
+        const eventsData = [
+            {
+                id: 1,
+                name: "Event Kick off",
+                date: "01-Nov-2026",
+                displayDate: "01 Nov 2026",
+                organizer: "Shruthi",
+                category: "Grand Event",
+                icon: "fa-flag-checkered",
+                badgeBg: "bg-emerald-50 text-emerald-700 border-emerald-200",
+                status: "Kickoff",
+                highlight: false
+            },
+            {
+                id: 2,
+                name: "Fixtures (Chess & Carrom)",
+                date: "01-Nov-2026",
+                displayDate: "01 Nov 2026",
+                organizer: "Vignesh",
+                category: "Sports",
+                icon: "fa-diagram-project",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Fixtures",
+                highlight: false
+            },
+            {
+                id: 3,
+                name: "Chess & Carrom Tournament",
+                date: "01-Nov-2026 to 13-Nov-2026",
+                displayDate: "1st to 13th Nov 2026",
+                organizer: "Vignesh & Prakash Sir",
+                category: "Sports",
+                icon: "fa-chess",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Multi-day",
+                highlight: false
+            },
+            {
+                id: 4,
+                name: "Rangoli Competition",
+                date: "07-Nov-2026",
+                displayDate: "07 Nov 2026",
+                organizer: "Padma madam",
+                category: "Cultural",
+                icon: "fa-palette",
+                badgeBg: "bg-purple-50 text-purple-700 border-purple-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 5,
+                name: "1 Min Games",
+                date: "13-Nov-2026",
+                displayDate: "13 Nov 2026",
+                organizer: "Mayuri",
+                category: "Fun",
+                icon: "fa-stopwatch",
+                badgeBg: "bg-amber-50 text-amber-700 border-amber-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 6,
+                name: "Treasure Hunt",
+                date: "13-Nov-2026",
+                displayDate: "13 Nov 2026",
+                organizer: "Harshith / Sanjay",
+                category: "Fun",
+                icon: "fa-map-location-dot",
+                badgeBg: "bg-amber-50 text-amber-700 border-amber-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 7,
+                name: "Public Speaking & Shloka Singing",
+                date: "14-Nov-2026",
+                displayDate: "14 Nov 2026",
+                organizer: "Vijayan Sir / Padma Madam",
+                category: "Cultural",
+                icon: "fa-microphone",
+                badgeBg: "bg-purple-50 text-purple-700 border-purple-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 8,
+                name: "Badminton Tournament",
+                date: "21-Nov-2026",
+                displayDate: "21 Nov 2026",
+                organizer: "Vignesh",
+                category: "Sports",
+                icon: "fa-table-tennis-paddle-ball",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 9,
+                name: "Throwball & Volleyball",
+                date: "22-Nov-2026",
+                displayDate: "22 Nov 2026",
+                organizer: "Karthik & Manasa",
+                category: "Sports",
+                icon: "fa-volleyball",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 10,
+                name: "Table Tennis",
+                date: "23-Nov-2026 to 27-Nov-2026",
+                displayDate: "23rd to 27th Nov 2026",
+                organizer: "Vignesh",
+                category: "Sports",
+                icon: "fa-ping-pong-paddle",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Multi-day",
+                highlight: false
+            },
+            {
+                id: 11,
+                name: "Snooker Tournament",
+                date: "28-Nov-2026",
+                displayDate: "28 Nov 2026",
+                organizer: "Prasanna",
+                category: "Sports",
+                icon: "fa-circle-dot",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 12,
+                name: "Cricket & Football Matches",
+                date: "29-Nov-2026",
+                displayDate: "29 Nov 2026",
+                organizer: "Abish / Harshith / Sanjay / Manasa",
+                category: "Sports",
+                icon: "fa-futbol",
+                badgeBg: "bg-blue-50 text-blue-700 border-blue-200",
+                status: "Scheduled",
+                highlight: false
+            },
+            {
+                id: 13,
+                name: "ASP DAY - Grand Event",
+                description: "Performances, Award & Prize Distribution",
+                date: "TBD",
+                displayDate: "Yet to be decided",
+                organizer: "Shruthi / Vijayan Sir / Abish / Amit",
+                category: "Grand Event",
+                icon: "fa-star",
+                badgeBg: "bg-rose-50 text-rose-700 border-rose-200",
+                status: "Finale",
+                highlight: true
+            }
+        ];
+
+        // State Management
+        let currentSearch = "";
+        let currentCategory = "all";
+        let activeView = "grid"; // "grid" or "table"
+
+        // DOM Elements
+        const gridViewContainer = document.getElementById("grid-view");
+        const tableViewContainer = document.getElementById("table-view");
+        const tableBody = document.getElementById("table-body");
+        const emptyState = document.getElementById("empty-state");
+        const searchInput = document.getElementById("search-input");
+        const categoryFilterContainer = document.getElementById("category-filters");
+        const visibleCountSpan = document.getElementById("visible-count");
+        
+        const btnGridView = document.getElementById("btn-grid-view");
+        const btnTableView = document.getElementById("btn-table-view");
+        const resetFiltersBtn = document.getElementById("reset-filters-btn");
+
+        // Render Cards (Grid View)
+        function renderGrid(events) {
+            gridViewContainer.innerHTML = "";
+            events.forEach(item => {
+                const isHighlight = item.highlight;
+                const card = document.createElement("div");
+                card.className = `bg-white rounded-2xl p-6 transition-all duration-300 border flex flex-col justify-between hover:shadow-lg hover:-translate-y-0.5 ${
+                    isHighlight ? 'border-indigo-400 ring-2 ring-indigo-500/10 shadow-md relative overflow-hidden' : 'border-slate-200/80 shadow-sm'
+                }`;
+
+                const highlightBadge = isHighlight ? 
+                    `<div class="absolute top-0 right-0 bg-gradient-to-l from-indigo-600 to-violet-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-bl-xl shadow-sm">
+                        <i class="fa-solid fa-crown mr-1"></i> Mega Event
+                    </div>` : '';
+
+                card.innerHTML = `
+                    ${highlightBadge}
+                    <div>
+                        <!-- Header / Category Badge -->
+                        <div class="flex items-center justify-between gap-2 mb-4">
+                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold border ${item.badgeBg}">
+                                <i class="fa-solid ${item.icon} text-xs"></i>
+                                ${item.category}
+                            </span>
+                            <span class="text-xs font-medium text-slate-400">${item.status}</span>
+                        </div>
+
+                        <!-- Event Title -->
+                        <h3 class="text-lg font-bold text-slate-900 group-hover:text-indigo-600 transition-colors mb-1">
+                            ${item.name}
+                        </h3>
+                        ${item.description ? `<p class="text-xs text-slate-500 mb-4">${item.description}</p>` : ''}
+                    </div>
+
+                    <!-- Details Section -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col gap-2.5 text-xs">
+                        <div class="flex items-center text-slate-600 font-medium">
+                            <div class="w-7 text-indigo-500 text-center"><i class="fa-regular fa-calendar-days text-sm"></i></div>
+                            <span class="${item.displayDate === 'Yet to be decided' ? 'italic text-amber-600 font-semibold' : 'text-slate-700'}">${item.displayDate}</span>
+                        </div>
+                        <div class="flex items-center text-slate-600">
+                            <div class="w-7 text-indigo-500 text-center"><i class="fa-solid fa-user-tie text-sm"></i></div>
+                            <span class="text-slate-700 truncate" title="${item.organizer}">Org: <strong class="font-semibold text-slate-900">${item.organizer}</strong></span>
+                        </div>
+                    </div>
+                `;
+                gridViewContainer.appendChild(card);
+            });
+        }
+
+        // Render Table View
+        function renderTable(events) {
+            tableBody.innerHTML = "";
+            events.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.className = "hover:bg-slate-50/80 transition-colors";
+                tr.innerHTML = `
+                    <td class="py-4 px-6 font-bold text-slate-900">
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm shrink-0">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                            <div>
+                                ${item.name}
+                                ${item.description ? `<div class="text-xs font-normal text-slate-400">${item.description}</div>` : ''}
+                            </div>
+                        </div>
+                    </td>
+                    <td class="py-4 px-6">
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold border ${item.badgeBg}">
+                            ${item.category}
+                        </span>
+                    </td>
+                    <td class="py-4 px-6 text-slate-700 font-medium">
+                        <span class="${item.displayDate === 'Yet to be decided' ? 'italic text-amber-600 font-semibold' : ''}">
+                            ${item.displayDate}
+                        </span>
+                    </td>
+                    <td class="py-4 px-6 text-slate-700 font-medium">
+                        ${item.organizer}
+                    </td>
+                    <td class="py-4 px-6">
+                        <span class="text-xs px-2.5 py-1 rounded-full bg-slate-100 text-slate-600 font-semibold">
+                            ${item.status}
+                        </span>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // Filter Logic
+        function filterEvents() {
+            const query = currentSearch.toLowerCase().trim();
+
+            const filtered = eventsData.filter(event => {
+                const matchesSearch = 
+                    event.name.toLowerCase().includes(query) ||
+                    event.organizer.toLowerCase().includes(query) ||
+                    event.category.toLowerCase().includes(query) ||
+                    event.displayDate.toLowerCase().includes(query);
+
+                const matchesCategory = currentCategory === "all" || event.category.toLowerCase() === currentCategory.toLowerCase();
+
+                return matchesSearch && matchesCategory;
+            });
+
+            // Update Counts
+            visibleCountSpan.textContent = filtered.length;
+
+            // Handle Empty State
+            if (filtered.length === 0) {
+                gridViewContainer.classList.add("hidden");
+                tableViewContainer.classList.add("hidden");
+                emptyState.classList.remove("hidden");
+            } else {
+                emptyState.classList.add("hidden");
+                if (activeView === "grid") {
+                    gridViewContainer.classList.remove("hidden");
+                    tableViewContainer.classList.add("hidden");
+                    renderGrid(filtered);
+                } else {
+                    gridViewContainer.classList.add("hidden");
+                    tableViewContainer.classList.remove("hidden");
+                    renderTable(filtered);
+                }
+            }
+        }
+
+        // Event Listeners
+        searchInput.addEventListener("input", (e) => {
+            currentSearch = e.target.value;
+            filterEvents();
+        });
+
+        categoryFilterContainer.addEventListener("click", (e) => {
+            const btn = e.target.closest(".cat-btn");
+            if (!btn) return;
+
+            // Update Active UI
+            document.querySelectorAll(".cat-btn").forEach(b => {
+                b.className = "cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-600 hover:text-slate-900";
+            });
+            btn.className = "cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-indigo-600 shadow-sm";
+
+            currentCategory = btn.getAttribute("data-cat");
+            filterEvents();
+        });
+
+        // View Toggle Buttons
+        btnGridView.addEventListener("click", () => {
+            activeView = "grid";
+            btnGridView.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-white text-slate-800 shadow-sm transition-all";
+            btnTableView.className = "px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-all";
+            filterEvents();
+        });
+
+        btnTableView.addEventListener("click", () => {
+            activeView = "table";
+            btnTableView.className = "px-3 py-1.5 rounded-lg text-xs font-medium bg-white text-slate-800 shadow-sm transition-all";
+            btnGridView.className = "px-3 py-1.5 rounded-lg text-xs font-medium text-slate-500 hover:text-slate-800 transition-all";
+            filterEvents();
+        });
+
+        resetFiltersBtn.addEventListener("click", () => {
+            currentSearch = "";
+            currentCategory = "all";
+            searchInput.value = "";
+
+            document.querySelectorAll(".cat-btn").forEach(b => {
+                if (b.getAttribute("data-cat") === "all") {
+                    b.className = "cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all bg-white text-indigo-600 shadow-sm";
+                } else {
+                    b.className = "cat-btn px-3 py-1.5 rounded-lg text-xs font-semibold transition-all text-slate-600 hover:text-slate-900";
+                }
+            });
+
+            filterEvents();
+        });
+
+        // Initial Render
+        filterEvents();
+    </script>
+</body>
+</html>
