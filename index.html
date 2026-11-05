@@ -1,224 +1,750 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASP Kreedothsav & Kala Taranga November 2026</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASP Annual Festival 2026 - Events & Schedule</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              900: '#312e81',
             }
+          },
+          boxShadow: {
+            'glow-amber': '0 4px 20px -2px rgba(245, 158, 11, 0.25)',
+            'glow-indigo': '0 4px 20px -2px rgba(99, 102, 241, 0.25)',
+          }
         }
-    </script>
-    <style>
-        .custom-scrollbar::-webkit-scrollbar {
-            height: 6px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f5f9;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 9999px;
-        }
-    </style>
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes pulseSubtle {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+    }
+    .pulse-subtle {
+      animation: pulseSubtle 3s infinite ease-in-out;
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-full flex flex-col pb-16 selection:bg-indigo-100 selection:text-indigo-900">
 
-    <!-- Header / Hero Section -->
-    <header class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-xl relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative z-10 text-center sm:text-left">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-300 text-xs font-semibold tracking-wide uppercase mb-3 border border-indigo-500/30">
-                <i class="fa-solid fa-calendar-star"></i> Event Schedule
-            </div>
-            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
-                ASP Kreedothsav & Kala Taranga November 2026! 🏆
-            </h1>
-            <div class="mt-3 flex items-center justify-center sm:justify-start gap-2 text-xs sm:text-sm text-indigo-200">
-                <i class="fa-regular fa-clock"></i>
-                <span>Last Updated: <strong class="text-white font-medium">01-Nov-2026</strong></span>
-            </div>
+  <!-- Top Sticky Header -->
+  <header class="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-shadow">
+    <div class="max-w-md mx-auto px-4 py-3.5 flex items-center justify-between">
+      <div class="flex items-center space-x-2.5">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-amber-500 flex items-center justify-center text-white shadow-sm shadow-indigo-200">
+          <i class="fa-solid fa-trophy text-sm"></i>
         </div>
-    </header>
+        <div>
+          <h1 class="text-base font-extrabold tracking-tight text-slate-900 leading-tight">ASP FEST '26</h1>
+          <p class="text-[11px] font-semibold text-slate-500 tracking-wide uppercase">Annual Celebrations</p>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <!-- Main Content Area -->
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+  <!-- Main Container -->
+  <main class="max-w-md mx-auto w-full px-4 pt-3 flex-1 flex flex-col space-y-4">
 
-        <!-- Table Container -->
-        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-            <div class="overflow-x-auto custom-scrollbar">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-slate-100/80 border-b border-slate-200 text-xs font-bold text-slate-600 uppercase tracking-wider">
-                            <th class="py-4 px-6 w-5/12">Event</th>
-                            <th class="py-4 px-6 w-3/12">Date</th>
-                            <th class="py-4 px-6 w-4/12">Organizer(s)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-body" class="divide-y divide-slate-100 text-sm">
-                        <!-- Dynamic JavaScript rendering table rows here -->
-                    </tbody>
-                </table>
-            </div>
+    <!-- Hero Banner & Stats Bar -->
+    <section class="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-2xl p-4 shadow-lg shadow-indigo-950/20 relative overflow-hidden">
+      <!-- Decorative background glow -->
+      <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
+      <div class="absolute -left-10 -top-10 w-40 h-40 bg-indigo-500/20 rounded-full blur-2xl pointer-events-none"></div>
+
+      <div class="relative z-10">
+        <div class="flex items-center justify-between mb-3">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded-md border border-amber-400/20">Official Schedule</span>
+            <h2 class="text-lg font-bold mt-1 text-white tracking-tight">Events Dashboard</h2>
+          </div>
+          <div class="text-right">
+            <span class="text-xs text-slate-300 block font-medium">Nov 2026</span>
+            <span class="text-[10px] text-indigo-300 font-semibold"><span id="hero-total-label">13</span> Main Events</span>
+          </div>
         </div>
 
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500 mt-8">
-        <div class="max-w-6xl mx-auto px-4">
-            <p>© 2026 ASP Events Committee • Designed for smooth event coordination</p>
+        <!-- Hero Stats Bar (Metrics) -->
+        <div class="grid grid-cols-4 gap-2 pt-2 border-t border-white/10">
+          <div class="bg-white/5 backdrop-blur-sm rounded-xl p-2 text-center border border-white/5">
+            <p class="text-[10px] text-slate-400 font-semibold uppercase tracking-wider">Total</p>
+            <p id="stat-total" class="text-base font-extrabold text-white mt-0.5">13</p>
+          </div>
+          <div class="bg-emerald-500/10 backdrop-blur-sm rounded-xl p-2 text-center border border-emerald-400/20">
+            <p class="text-[10px] text-emerald-300 font-semibold uppercase tracking-wider">Done</p>
+            <p id="stat-completed" class="text-base font-extrabold text-emerald-400 mt-0.5">2</p>
+          </div>
+          <div class="bg-blue-500/10 backdrop-blur-sm rounded-xl p-2 text-center border border-blue-400/20">
+            <p class="text-[10px] text-blue-300 font-semibold uppercase tracking-wider">Sports</p>
+            <p id="stat-sports" class="text-base font-extrabold text-blue-400 mt-0.5">6</p>
+          </div>
+          <div class="bg-purple-500/10 backdrop-blur-sm rounded-xl p-2 text-center border border-purple-400/20">
+            <p class="text-[10px] text-purple-300 font-semibold uppercase tracking-wider">Cultural</p>
+            <p id="stat-cultural" class="text-base font-extrabold text-purple-400 mt-0.5">2</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- JavaScript Data & Rendering -->
-    <script>
-        const eventsData = [
-            {
-                name: "Event Kick off",
-                date: "01-Nov-2026",
-                organizer: "Shruthi",
-                icon: "fa-flag-checkered",
-                isFinale: false
-            },
-            {
-                name: "Fixtures",
-                date: "01-Nov-2026",
-                organizer: "Vignesh",
-                icon: "fa-sitemap",
-                isFinale: false
-            },
-            {
-                name: "Chess and Carrom",
-                date: "4th to 13th Nov 2026",
-                organizer: "Vignesh",
-                icon: "fa-chess",
-                isFinale: false
-            },
-            {
-                name: "Treasure Hunt",
-                date: "14-Nov-2026, 10am onwards",
-                organizer: "Harshith / Sanjay",
-                icon: "fa-map-location-dot",
-                isFinale: false
-            },
-            {
-                name: "Public Speaking & Shloka Singing",
-                date: "14-Nov-2026, 2.30pm onwards",
-                organizer: "Vijayan Sir / Padma Venkat Madam",
-                icon: "fa-microphone",
-                isFinale: false
-            },
-            {
-                name: "Rangoli",
-                date: "15-Nov-2026, 11am onwards",
-                organizer: "Padma Venkat madam",
-                icon: "fa-palette",
-                isFinale: false
-            },
-            {
-                name: "1 Min Games",
-                date: "TBD",
-                organizer: "TBD",
-                icon: "fa-stopwatch",
-                isFinale: false
-            },
-            {
-                name: "Badminton",
-                date: "21-Nov-2026",
-                organizer: "Vignesh",
-                icon: "fa-table-tennis-paddle-ball",
-                isFinale: false
-            },
-            {
-                name: "Throwball & Volleyball",
-                date: "22-Nov-2026",
-                organizer: "Karthik and Manasa",
-                icon: "fa-volleyball",
-                isFinale: false
-            },
-            {
-                name: "Table Tennis",
-                date: "23 to 27-Nov-2026",
-                organizer: "Vignesh",
-                icon: "fa-ping-pong-paddle",
-                isFinale: false
-            },
-            {
-                name: "Snooker",
-                date: "28-Nov-2026",
-                organizer: "Prasanna",
-                icon: "fa-circle-dot",
-                isFinale: false
-            },
-            {
-                name: "Cricket and Football",
-                date: "29-Nov-2026",
-                organizer: "Abish / Harshith / Sanjay / Manasa",
-                icon: "fa-futbol",
-                isFinale: false
-            },
-            {
-                name: "ASP DAY - Grand Event",
-                description: "Performances & Prize Distribution",
-                date: "Yet to be decided",
-                organizer: "Shruthi / Vijayan Sir / Abish / Amit",
-                icon: "fa-trophy",
-                isFinale: true
-            }
-        ];
+    <!-- Search Bar & View Toggle Control -->
+    <section class="space-y-2.5">
+      <!-- Search input -->
+      <div class="relative">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Search by event or organizer..." 
+          class="w-full bg-white border border-slate-200/90 rounded-xl pl-10 pr-9 py-2.5 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm transition-all"
+        />
+        <button id="clear-search" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs">
+          <i class="fa-solid fa-circle-xmark"></i>
+        </button>
+      </div>
 
-        const tableBody = document.getElementById("table-body");
+      <!-- Controls Row: Category Filter Scroll & View Switcher -->
+      <div class="flex items-center justify-between gap-2">
+        <div class="text-[11px] font-bold text-slate-500 uppercase tracking-wider flex items-center">
+          <i class="fa-solid fa-sliders mr-1.5 text-indigo-500"></i> Categories
+        </div>
 
-        eventsData.forEach((item) => {
-            const tr = document.createElement("tr");
-            tr.className = item.isFinale 
-                ? "bg-amber-50/50 hover:bg-amber-50 transition-colors font-medium"
-                : "hover:bg-slate-50 transition-colors";
+        <!-- View Toggle Buttons -->
+        <div class="inline-flex p-0.5 bg-slate-200/80 rounded-xl border border-slate-200 shadow-inner">
+          <button 
+            id="view-grid-btn" 
+            class="px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all bg-white text-indigo-700 shadow-sm"
+            title="Grid Cards View"
+          >
+            <i class="fa-solid fa-grip text-xs"></i>
+            <span>Cards</span>
+          </button>
+          <button 
+            id="view-timeline-btn" 
+            class="px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all text-slate-600 hover:text-slate-900"
+            title="Timeline / Table View"
+          >
+            <i class="fa-solid fa-list-check text-xs"></i>
+            <span>Timeline</span>
+          </button>
+        </div>
+      </div>
 
-            tr.innerHTML = `
-                <td class="py-4 px-6 font-semibold text-slate-900">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-xl ${item.isFinale ? 'bg-amber-100 text-amber-700' : 'bg-indigo-50 text-indigo-600'} flex items-center justify-center text-sm shrink-0">
-                            <i class="fa-solid ${item.icon}"></i>
-                        </div>
-                        <div>
-                            <span>${item.name}</span>
-                            ${item.description ? `<div class="text-xs font-normal text-amber-800/80 mt-0.5">${item.description}</div>` : ''}
-                        </div>
-                    </div>
-                </td>
-                <td class="py-4 px-6 text-slate-700 font-medium whitespace-nowrap">
-                    ${item.date === 'Yet to be decided' 
-                        ? `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-200">
-                             <i class="fa-regular fa-clock"></i> ${item.date}
-                           </span>` 
-                        : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 border border-slate-200">
-                             <i class="fa-regular fa-calendar-days text-indigo-500"></i> ${item.date}
-                           </span>`
-                    }
-                </td>
-                <td class="py-4 px-6 text-slate-700">
-                    <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-user-tie text-slate-400 text-xs"></i>
-                        <span class="font-medium text-slate-800">${item.organizer}</span>
-                    </div>
-                </td>
-            `;
-            tableBody.appendChild(tr);
+      <!-- Horizontal Pill Filter Bar -->
+      <div class="flex items-center space-x-1.5 overflow-x-auto pb-1 hide-scrollbar">
+        <button data-category="All" class="category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-sm shadow-indigo-200">
+          All
+        </button>
+        <button data-category="Sports" class="category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200 hover:bg-slate-50 transition-all">
+          Sports
+        </button>
+        <button data-category="Cultural" class="category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200 hover:bg-slate-50 transition-all">
+          Cultural
+        </button>
+        <button data-category="Fun Games" class="category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200 hover:bg-slate-50 transition-all">
+          Fun Games
+        </button>
+        <button data-category="Grand Finale" class="category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200 hover:bg-slate-50 transition-all">
+          Grand Finale
+        </button>
+      </div>
+
+      <!-- Active Filters & Result Counter -->
+      <div class="flex items-center justify-between text-xs px-1 text-slate-500">
+        <div>
+          Showing <span id="event-count" class="font-bold text-slate-800">13</span> events
+        </div>
+        <div id="status-quick-filters" class="flex items-center space-x-1">
+          <button data-status="All" class="status-quick-tag text-[11px] font-semibold text-indigo-600 underline">All</button>
+          <span class="text-slate-300">·</span>
+          <button data-status="Ongoing" class="status-quick-tag text-[11px] text-slate-500 hover:text-slate-800">Live</button>
+          <span class="text-slate-300">·</span>
+          <button data-status="Upcoming" class="status-quick-tag text-[11px] text-slate-500 hover:text-slate-800">Upcoming</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Display Area -->
+    <section class="flex-1 min-h-[360px]">
+
+      <!-- Empty State Container -->
+      <div id="empty-state" class="hidden py-12 px-4 text-center bg-white rounded-2xl border border-dashed border-slate-200">
+        <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+          <i class="fa-solid fa-calendar-xmark text-lg"></i>
+        </div>
+        <h3 class="text-sm font-bold text-slate-700">No events matched</h3>
+        <p class="text-xs text-slate-400 mt-1">Try relaxing your search terms or category selection.</p>
+        <button id="reset-filters-btn" class="mt-3.5 px-3 py-1.5 text-xs font-semibold text-indigo-600 bg-indigo-50 rounded-lg hover:bg-indigo-100 transition-colors">
+          Reset all filters
+        </button>
+      </div>
+
+      <!-- VIEW 1: Cards View (Default Grid) -->
+      <div id="cards-view" class="space-y-3">
+        <!-- Event cards rendered via JS -->
+      </div>
+
+      <!-- VIEW 2: Timeline / Table View -->
+      <div id="timeline-view" class="hidden">
+        <div class="relative pl-6 space-y-6 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-0.5 before:bg-slate-200" id="timeline-container">
+          <!-- Timeline elements rendered via JS -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Sticky Quick Summary / Bottom Navigation Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-20 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2">
+    <div class="max-w-md mx-auto px-4 flex items-center justify-between text-xs">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-indigo-600"></span>
+        <span class="font-semibold text-slate-700">ASP FEST 2026</span>
+      </div>
+      <div class="flex items-center space-x-3 text-slate-500">
+        <button onclick="scrollToTop()" class="hover:text-indigo-600 font-medium flex items-center space-x-1">
+          <i class="fa-solid fa-arrow-up text-[10px]"></i>
+          <span>Top</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Logic & Dataset Injection -->
+  <script>
+    // Injected Dataset
+    const eventsData = [
+      {
+        "id": 1,
+        "name": "Event Kick off",
+        "category": "Ceremony",
+        "date": "01-Nov-2026",
+        "time": "Kick-off",
+        "organizer": "Shruthi",
+        "icon": "fa-flag-checkered",
+        "status": "Completed"
+      },
+      {
+        "id": 2,
+        "name": "Fixtures",
+        "category": "Ceremony",
+        "date": "01-Nov-2026",
+        "time": "Kick-off",
+        "organizer": "Vignesh",
+        "icon": "fa-sitemap",
+        "status": "Completed"
+      },
+      {
+        "id": 3,
+        "name": "Chess and Carrom",
+        "category": "Sports (Indoor)",
+        "date": "4th to 13th Nov 2026",
+        "time": "Ongoing",
+        "organizer": "Vignesh",
+        "icon": "fa-chess",
+        "status": "Ongoing"
+      },
+      {
+        "id": 4,
+        "name": "Treasure Hunt",
+        "category": "Fun Games",
+        "date": "14-Nov-2026",
+        "time": "10:00 AM onwards",
+        "organizer": "Harshith / Sanjay",
+        "icon": "fa-map-location-dot",
+        "status": "Upcoming"
+      },
+      {
+        "id": 5,
+        "name": "Public Speaking & Shloka Singing",
+        "category": "Cultural",
+        "date": "14-Nov-2026",
+        "time": "2:30 PM onwards",
+        "organizer": "Vijayan Sir / Padma Venkat Madam",
+        "icon": "fa-microphone",
+        "status": "Upcoming"
+      },
+      {
+        "id": 6,
+        "name": "Rangoli",
+        "category": "Cultural",
+        "date": "15-Nov-2026",
+        "time": "11:00 AM onwards",
+        "organizer": "Padma Venkat madam",
+        "icon": "fa-palette",
+        "status": "Upcoming"
+      },
+      {
+        "id": 7,
+        "name": "1 Min Games",
+        "category": "Fun Games",
+        "date": "TBD",
+        "time": "TBD",
+        "organizer": "TBD",
+        "icon": "fa-stopwatch",
+        "status": "TBD"
+      },
+      {
+        "id": 8,
+        "name": "Badminton",
+        "category": "Sports (Indoor)",
+        "date": "21-Nov-2026",
+        "time": "Full Day",
+        "organizer": "Vignesh",
+        "icon": "fa-table-tennis-paddle-ball",
+        "status": "Upcoming"
+      },
+      {
+        "id": 9,
+        "name": "Throwball & Volleyball",
+        "category": "Sports (Outdoor)",
+        "date": "22-Nov-2026",
+        "time": "Full Day",
+        "organizer": "Karthik and Manasa",
+        "icon": "fa-volleyball",
+        "status": "Upcoming"
+      },
+      {
+        "id": 10,
+        "name": "Table Tennis",
+        "category": "Sports (Indoor)",
+        "date": "23 to 27-Nov-2026",
+        "time": "Weekdays",
+        "organizer": "Vignesh",
+        "icon": "fa-table-tennis-paddle-ball",
+        "status": "Upcoming"
+      },
+      {
+        "id": 11,
+        "name": "Snooker",
+        "category": "Sports (Indoor)",
+        "date": "28-Nov-2026",
+        "time": "Full Day",
+        "organizer": "Prasanna",
+        "icon": "fa-circle-dot",
+        "status": "Upcoming"
+      },
+      {
+        "id": 12,
+        "name": "Cricket and Football",
+        "category": "Sports (Outdoor)",
+        "date": "29-Nov-2026",
+        "time": "Full Day",
+        "organizer": "Abish / Harshith / Sanjay / Manasa",
+        "icon": "fa-futbol",
+        "status": "Upcoming"
+      },
+      {
+        "id": 13,
+        "name": "ASP DAY - Grand Event",
+        "category": "Grand Finale",
+        "description": "Performances & Prize Distribution",
+        "date": "Yet to be decided",
+        "time": "Evening",
+        "organizer": "Shruthi / Vijayan Sir / Abish / Amit",
+        "icon": "fa-trophy",
+        "isFinale": true,
+        "status": "Upcoming"
+      }
+    ];
+
+    // State
+    let currentView = 'cards'; // 'cards' | 'timeline'
+    let selectedCategory = 'All'; // 'All' | 'Sports' | 'Cultural' | 'Fun Games' | 'Grand Finale'
+    let selectedStatus = 'All';
+    let searchQuery = '';
+
+    // Dynamically calculate and update stats from dataset
+    function updateHeroStats() {
+      const total = eventsData.length;
+      const completed = eventsData.filter(e => e.status === 'Completed').length;
+      const sports = eventsData.filter(e => e.category.toLowerCase().includes('sports')).length;
+      const cultural = eventsData.filter(e => e.category.toLowerCase().includes('cultural')).length;
+
+      const statTotalEl = document.getElementById('stat-total');
+      const statCompletedEl = document.getElementById('stat-completed');
+      const statSportsEl = document.getElementById('stat-sports');
+      const statCulturalEl = document.getElementById('stat-cultural');
+      const heroLabelEl = document.getElementById('hero-total-label');
+
+      if (statTotalEl) statTotalEl.innerText = total;
+      if (statCompletedEl) statCompletedEl.innerText = completed;
+      if (statSportsEl) statSportsEl.innerText = sports;
+      if (statCulturalEl) statCulturalEl.innerText = cultural;
+      if (heroLabelEl) heroLabelEl.innerText = total;
+    }
+
+    // Color Helpers for Badges & Categories
+    function getStatusBadge(status) {
+      switch (status) {
+        case 'Completed':
+          return `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                    <i class="fa-solid fa-circle-check mr-1 text-[9px]"></i> Completed
+                  </span>`;
+        case 'Ongoing':
+          return `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-700 border border-amber-200 animate-pulse">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mr-1.5"></span> Ongoing
+                  </span>`;
+        case 'Upcoming':
+          return `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-200">
+                    <i class="fa-solid fa-clock mr-1 text-[9px]"></i> Upcoming
+                  </span>`;
+        case 'TBD':
+        default:
+          return `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-[10px] font-bold bg-slate-100 text-slate-600 border border-slate-200">
+                    <i class="fa-solid fa-hourglass mr-1 text-[9px]"></i> TBD
+                  </span>`;
+      }
+    }
+
+    function getCategoryStyle(cat) {
+      if (cat.includes('Sports')) {
+        return {
+          badge: 'bg-blue-50 text-blue-700 border-blue-200',
+          iconBg: 'bg-blue-100 text-blue-700',
+          accent: 'border-l-blue-500'
+        };
+      } else if (cat.includes('Cultural')) {
+        return {
+          badge: 'bg-purple-50 text-purple-700 border-purple-200',
+          iconBg: 'bg-purple-100 text-purple-700',
+          accent: 'border-l-purple-500'
+        };
+      } else if (cat.includes('Fun Games')) {
+        return {
+          badge: 'bg-pink-50 text-pink-700 border-pink-200',
+          iconBg: 'bg-pink-100 text-pink-700',
+          accent: 'border-l-pink-500'
+        };
+      } else if (cat.includes('Grand Finale')) {
+        return {
+          badge: 'bg-amber-100 text-amber-900 border-amber-300 font-extrabold',
+          iconBg: 'bg-gradient-to-tr from-amber-500 to-yellow-400 text-white shadow-glow-amber',
+          accent: 'border-l-amber-500 ring-1 ring-amber-200'
+        };
+      } else {
+        return {
+          badge: 'bg-slate-100 text-slate-700 border-slate-200',
+          iconBg: 'bg-slate-100 text-slate-700',
+          accent: 'border-l-slate-400'
+        };
+      }
+    }
+
+    // Filter Logic
+    function getFilteredEvents() {
+      return eventsData.filter(event => {
+        // Category filter
+        const matchCategory = (selectedCategory === 'All') ||
+          (selectedCategory === 'Sports' && event.category.toLowerCase().includes('sports')) ||
+          (selectedCategory === 'Cultural' && event.category.toLowerCase().includes('cultural')) ||
+          (selectedCategory === 'Fun Games' && event.category.toLowerCase().includes('fun games')) ||
+          (selectedCategory === 'Grand Finale' && event.category.toLowerCase().includes('grand finale'));
+
+        // Status filter
+        const matchStatus = (selectedStatus === 'All') || (event.status === selectedStatus);
+
+        // Search match
+        const q = searchQuery.trim().toLowerCase();
+        const matchSearch = !q ||
+          event.name.toLowerCase().includes(q) ||
+          event.organizer.toLowerCase().includes(q) ||
+          event.category.toLowerCase().includes(q);
+
+        return matchCategory && matchStatus && matchSearch;
+      });
+    }
+
+    // Render Cards View
+    function renderCards(events) {
+      const container = document.getElementById('cards-view');
+      container.innerHTML = '';
+
+      events.forEach(item => {
+        const catStyle = getCategoryStyle(item.category);
+        const isFinale = item.isFinale;
+
+        const card = document.createElement('div');
+        card.className = `bg-white rounded-xl p-3.5 border ${isFinale ? 'border-amber-300 bg-gradient-to-b from-amber-50/40 to-white shadow-md' : 'border-slate-200 shadow-sm'} hover:shadow-md transition-all relative overflow-hidden`;
+
+        // Left accent border strip
+        card.style.borderLeftWidth = '4px';
+        if (item.category.includes('Sports')) card.style.borderLeftColor = '#3b82f6';
+        else if (item.category.includes('Cultural')) card.style.borderLeftColor = '#a855f7';
+        else if (item.category.includes('Fun Games')) card.style.borderLeftColor = '#ec4899';
+        else if (item.category.includes('Grand Finale')) card.style.borderLeftColor = '#f59e0b';
+        else card.style.borderLeftColor = '#64748b';
+
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-start space-x-3">
+              <div class="w-10 h-10 rounded-xl ${catStyle.iconBg} flex items-center justify-center shrink-0 text-sm mt-0.5">
+                <i class="fa-solid ${item.icon}"></i>
+              </div>
+              <div>
+                <div class="flex items-center space-x-2 flex-wrap gap-y-1 mb-1">
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold ${catStyle.badge} border">
+                    ${item.category}
+                  </span>
+                  ${getStatusBadge(item.status)}
+                </div>
+                <h3 class="text-sm font-bold text-slate-900 leading-snug flex items-center gap-1.5">
+                  ${item.name}
+                  ${isFinale ? '<span class="text-amber-500 text-xs" title="Grand Finale"><i class="fa-solid fa-crown"></i></span>' : ''}
+                </h3>
+                ${item.description ? `<p class="text-xs text-amber-800/80 font-medium mt-0.5">${item.description}</p>` : ''}
+              </div>
+            </div>
+          </div>
+
+          <!-- Event Meta: Date, Time & Organizer -->
+          <div class="mt-3 pt-2.5 border-t border-slate-100 grid grid-cols-2 gap-2 text-xs text-slate-600">
+            <div class="flex items-center space-x-1.5">
+              <i class="fa-regular fa-calendar text-slate-400 text-[11px]"></i>
+              <span class="truncate font-medium text-slate-700">${item.date}</span>
+            </div>
+            <div class="flex items-center space-x-1.5">
+              <i class="fa-regular fa-clock text-slate-400 text-[11px]"></i>
+              <span class="truncate text-slate-600">${item.time}</span>
+            </div>
+            <div class="col-span-2 flex items-center space-x-1.5 mt-0.5 bg-slate-50 rounded-lg px-2 py-1 border border-slate-100">
+              <i class="fa-solid fa-user-tie text-indigo-500 text-[10px]"></i>
+              <span class="text-[11px] text-slate-500 font-medium">Organizer:</span>
+              <span class="text-[11px] font-semibold text-slate-800 truncate">${item.organizer}</span>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // Render Timeline View
+    function renderTimeline(events) {
+      const container = document.getElementById('timeline-container');
+      container.innerHTML = '';
+
+      events.forEach((item, index) => {
+        const catStyle = getCategoryStyle(item.category);
+
+        const node = document.createElement('div');
+        node.className = 'relative flex items-start space-x-3.5 group';
+
+        // Pin marker
+        const marker = `
+          <div class="absolute -left-[29px] top-1.5 w-4 h-4 rounded-full border-2 border-white ring-2 ${item.status === 'Completed' ? 'ring-emerald-400 bg-emerald-500' : item.status === 'Ongoing' ? 'ring-amber-400 bg-amber-500 animate-pulse' : 'ring-indigo-300 bg-white'} flex items-center justify-center">
+            ${item.status === 'Completed' ? '<i class="fa-solid fa-check text-[7px] text-white"></i>' : ''}
+          </div>
+        `;
+
+        node.innerHTML = `
+          ${marker}
+          <div class="w-full bg-white rounded-xl p-3 border border-slate-200/90 shadow-sm hover:border-indigo-300 transition-all">
+            <div class="flex items-center justify-between mb-1.5 flex-wrap gap-1">
+              <div class="flex items-center space-x-2">
+                <span class="text-xs font-bold text-indigo-600">${item.date}</span>
+                <span class="text-[10px] text-slate-400">•</span>
+                <span class="text-[11px] text-slate-500 font-medium">${item.time}</span>
+              </div>
+              ${getStatusBadge(item.status)}
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-2">
+                <span class="w-6 h-6 rounded-lg ${catStyle.iconBg} flex items-center justify-center text-[10px]">
+                  <i class="fa-solid ${item.icon}"></i>
+                </span>
+                <h4 class="text-xs font-bold text-slate-900">${item.name}</h4>
+              </div>
+              <span class="text-[10px] px-1.5 py-0.5 rounded font-medium ${catStyle.badge} border">${item.category}</span>
+            </div>
+
+            <div class="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+              <div class="flex items-center space-x-1 truncate">
+                <i class="fa-solid fa-user-circle text-slate-400"></i>
+                <span class="truncate">${item.organizer}</span>
+              </div>
+              <span class="text-[10px] font-semibold text-slate-400">#${item.id}</span>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(node);
+      });
+    }
+
+    // Refresh UI based on state
+    function updateUI() {
+      const filtered = getFilteredEvents();
+      const countEl = document.getElementById('event-count');
+      const emptyState = document.getElementById('empty-state');
+      const cardsView = document.getElementById('cards-view');
+      const timelineView = document.getElementById('timeline-view');
+
+      countEl.innerText = filtered.length;
+
+      if (filtered.length === 0) {
+        emptyState.classList.remove('hidden');
+        cardsView.classList.add('hidden');
+        timelineView.classList.add('hidden');
+      } else {
+        emptyState.classList.add('hidden');
+        if (currentView === 'cards') {
+          cardsView.classList.remove('hidden');
+          timelineView.classList.add('hidden');
+          renderCards(filtered);
+        } else {
+          cardsView.classList.add('hidden');
+          timelineView.classList.remove('hidden');
+          renderTimeline(filtered);
+        }
+      }
+    }
+
+    // Setup Event Listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      // Initialize dynamic hero stats
+      updateHeroStats();
+
+      // 1. Search input handling
+      const searchInput = document.getElementById('search-input');
+      const clearSearchBtn = document.getElementById('clear-search');
+
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        if (searchQuery.length > 0) {
+          clearSearchBtn.classList.remove('hidden');
+        } else {
+          clearSearchBtn.classList.add('hidden');
+        }
+        updateUI();
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearSearchBtn.classList.add('hidden');
+        updateUI();
+      });
+
+      // 2. View Toggle
+      const gridBtn = document.getElementById('view-grid-btn');
+      const timelineBtn = document.getElementById('view-timeline-btn');
+
+      gridBtn.addEventListener('click', () => {
+        currentView = 'cards';
+        gridBtn.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all bg-white text-indigo-700 shadow-sm';
+        timelineBtn.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all text-slate-600 hover:text-slate-900';
+        updateUI();
+      });
+
+      timelineBtn.addEventListener('click', () => {
+        currentView = 'timeline';
+        timelineBtn.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all bg-white text-indigo-700 shadow-sm';
+        gridBtn.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold flex items-center space-x-1.5 transition-all text-slate-600 hover:text-slate-900';
+        updateUI();
+      });
+
+      // 3. Category Filter Pills
+      const categoryPills = document.querySelectorAll('.category-pill');
+      categoryPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          selectedCategory = pill.getAttribute('data-category');
+          categoryPills.forEach(p => {
+            p.className = 'category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200 hover:bg-slate-50 transition-all';
+          });
+          pill.className = 'category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-sm shadow-indigo-200';
+          updateUI();
         });
-    </script>
+      });
+
+      // 4. Quick Status Filters
+      const statusTags = document.querySelectorAll('.status-quick-tag');
+      statusTags.forEach(tag => {
+        tag.addEventListener('click', () => {
+          selectedStatus = tag.getAttribute('data-status');
+          statusTags.forEach(t => {
+            t.className = 'status-quick-tag text-[11px] text-slate-500 hover:text-slate-800';
+          });
+          tag.className = 'status-quick-tag text-[11px] font-semibold text-indigo-600 underline';
+          updateUI();
+        });
+      });
+
+      // 5. Reset button
+      document.getElementById('reset-filters-btn').addEventListener('click', () => {
+        selectedCategory = 'All';
+        selectedStatus = 'All';
+        searchQuery = '';
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+
+        categoryPills.forEach(p => {
+          if (p.getAttribute('data-category') === 'All') {
+            p.className = 'category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-bold transition-all bg-indigo-600 text-white shadow-sm shadow-indigo-200';
+          } else {
+            p.className = 'category-pill whitespace-nowrap px-3 py-1.5 rounded-full text-xs font-medium text-slate-600 bg-white border border-slate-200 hover:bg-slate-50 transition-all';
+          }
+        });
+
+        statusTags.forEach(t => {
+          if (t.getAttribute('data-status') === 'All') {
+            t.className = 'status-quick-tag text-[11px] font-semibold text-indigo-600 underline';
+          } else {
+            t.className = 'status-quick-tag text-[11px] text-slate-500 hover:text-slate-800';
+          }
+        });
+
+        updateUI();
+      });
+
+      // Initial Render
+      updateUI();
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
