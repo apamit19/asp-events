@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASP Kreedothsav &amp; Kala Taranga November 2026! 🏆</title>
+  <title id="page-title">ASP Kreedothsav &amp; Kala Taranga November 2026! 🏆</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter -->
@@ -24,15 +24,87 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
 
+  <!-- Embedded JSON Data -->
+  <script id="event-data" type="application/json">
+    {
+      "title": "ASP Kreedothsav & Kala Taranga November 2026! 🏆",
+      "lastUpdated": "November 12, 2026",
+      "completedEvents": [
+        "Chess kids",
+        "Volleyball mens"
+      ],
+      "ongoingEvents": [
+        "Chess adults",
+        "Carrom Kids and doubles"
+      ],
+      "upcomingEvents": [
+        {
+          "name": "1 min games",
+          "dateTime": "14 Nov, 11:00 AM",
+          "organizer": "Mayuri Pandit",
+          "participants": [
+            "Sujay", "Rohan Bijakal", "Arnav S Vijesh", "Hrithvik K C",
+            "Sahana Prashant", "Aarvi", "Sandeep Kamat", "Sanidhya S T",
+            "Parvati S T", "Diya", "Dhruv Urolagin", "Nakshathra",
+            "Hemalatha", "Navyatha", "ILAN", "Manas B", "Atharva", "Iyra", "Shraddha", "Laasya"
+          ]
+        },
+        {
+          "name": "Public Speaking",
+          "dateTime": "14 Nov, 2:30 PM",
+          "organizer": "Vijayan Sir",
+          "participants": [
+            "Shloka Agarwal", "Laksh", "Leisha", "Sudhanva",
+            "Aarna Kulkarni", "Navyatha", "Nikhita", "Shraddha",
+            "Laasya", "Iyra"
+          ]
+        },
+        {
+          "name": "Shloka recitation",
+          "dateTime": "14 Nov, 3:00 PM",
+          "organizer": "Padma Venkat Madam",
+          "participants": [
+            "Hrithvik K C", "Shloka Agarwal", "Aarvi", "Samiksha Kulkarni",
+            "Navyatha", "Nakshathra", "Aryahi", "Dakshith P Gowda",
+            "Shraddha", "Laasya", "Sandeep Kamat", "Atharva"
+          ]
+        },
+        {
+          "name": "Dabba Party",
+          "dateTime": "14th Nov, 6:30 PM onwards",
+          "organizer": "Harshith & Sanjay",
+          "participants": []
+        },
+        {
+          "name": "Rangoli",
+          "dateTime": "15th Nov, 10:45 AM",
+          "organizer": "Padma Venkat Madam",
+          "participants": ["Parvati S T", "Iyra", "Anita Kulkarni", "Hemalatha", 
+            "Priyanka Kolvekar", "Mayuri Pandit", "Prathibha Sumanth", "Shwetha Kishore"]
+        },
+        {
+          "name": "Badminton",
+          "dateTime": "15th Nov, 2:30 PM onwards",
+          "organizer": "Vignesh",
+          "participants": []
+        }
+      ],
+      "planningEvents": [
+        "Throwball",
+        "Cricket",
+        "Table Tennis",
+        "Treasure Hunt",
+        "Snooker",
+        "Football"
+      ]
+    }
+  </script>
+
   <!-- Dark Header -->
   <header class="bg-slate-900 text-white py-8 px-4 sm:px-6 border-b border-slate-800">
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
-        ASP Kreedothsav &amp; Kala Taranga November 2026! 🏆
-      </h1>
-      <p class="mt-2 text-xs sm:text-sm text-slate-400 font-medium">
-        Last updated: November 12, 2026
-      </p>
+      <h1 id="header-title" class="text-2xl sm:text-3xl font-bold tracking-tight leading-snug"></h1>
+      <p id="header-updated" class="mt-2 text-xs sm:text-sm text-slate-400 font-medium"></p>
     </div>
   </header>
 
@@ -43,228 +115,115 @@
     <section aria-labelledby="completed-heading" class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
       <div class="flex items-center gap-2.5 mb-4">
         <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-        <h2 id="completed-heading" class="text-lg font-semibold text-slate-900">
-          Completed Events
-        </h2>
+        <h2 id="completed-heading" class="text-lg font-semibold text-slate-900">Completed Events</h2>
       </div>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">
-          Chess kids
-        </span>
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">
-          Volleyball mens
-        </span>
-      </div>
+      <div id="completed-container" class="flex flex-wrap gap-2"></div>
     </section>
 
     <!-- 2. On going -->
     <section aria-labelledby="ongoing-heading" class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
       <div class="flex items-center gap-2.5 mb-4">
         <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-        <h2 id="ongoing-heading" class="text-lg font-semibold text-slate-900">
-          On going
-        </h2>
+        <h2 id="ongoing-heading" class="text-lg font-semibold text-slate-900">On going</h2>
       </div>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/70 text-sm font-medium">
-          Chess adults
-        </span>
-        <span class="px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/70 text-sm font-medium">
-          Carrom Kids and doubles
-        </span>
-      </div>
+      <div id="ongoing-container" class="flex flex-wrap gap-2"></div>
     </section>
 
     <!-- 3. Upcoming Events -->
     <section aria-labelledby="upcoming-heading" class="space-y-4">
       <div class="flex items-center gap-2.5 px-1">
         <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
-        <h2 id="upcoming-heading" class="text-lg font-semibold text-slate-900">
-          Upcoming Events
-        </h2>
+        <h2 id="upcoming-heading" class="text-lg font-semibold text-slate-900">Upcoming Events</h2>
       </div>
-
-      <div class="space-y-4">
-
-        <!-- Event 1: 1 min games -->
-        <article class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
-            <h3 class="text-base sm:text-lg font-semibold text-slate-900">
-              1 min games
-            </h3>
-            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">
-              14 Nov, 11:00 AM
-            </span>
-          </div>
-          <p class="mt-1.5 text-sm text-slate-600">
-            Organizer: <span class="font-medium text-slate-800">Mayuri Pandit</span>
-          </p>
-
-          <!-- Participants -->
-          <div class="mt-4 pt-4 border-t border-slate-100">
-            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2.5">
-              Participants (17)
-            </p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Sujay</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Rohan Bijakal</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Arnav S Vijesh</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Hrithvik K C</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Sahana Prashant</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Aarvi</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Sandeep Kamat</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Sanidhya S T</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Parvati S T</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Diya</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Dhruv Urolagin</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Nakshathra</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Hemalatha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Navyatha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">ILAN</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Manas B</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Atharva</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Iyra</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Event 2: Public Speaking -->
-        <article class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
-            <h3 class="text-base sm:text-lg font-semibold text-slate-900">
-              Public Speaking
-            </h3>
-            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">
-              14 Nov, 2:30 PM
-            </span>
-          </div>
-          <p class="mt-1.5 text-sm text-slate-600">
-            Organizer: <span class="font-medium text-slate-800">Vijayan Sir</span>
-          </p>
-
-          <!-- Participants -->
-          <div class="mt-4 pt-4 border-t border-slate-100">
-            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2.5">
-              Participants (10)
-            </p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Shloka Agarwal</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Laksh</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Leisha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Sudhanva</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Aarna Kulkarni</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Navyatha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Nikhita</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Shraddha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Laasya</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Iyra</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Event 3: Shloka recitation -->
-        <article class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
-            <h3 class="text-base sm:text-lg font-semibold text-slate-900">
-              Shloka recitation
-            </h3>
-            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">
-              14 Nov, 3:00 PM
-            </span>
-          </div>
-          <p class="mt-1.5 text-sm text-slate-600">
-            Organizer: <span class="font-medium text-slate-800">Padma Venkat Madam</span>
-          </p>
-
-          <!-- Participants -->
-          <div class="mt-4 pt-4 border-t border-slate-100">
-            <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2.5">
-              Participants (12)
-            </p>
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Hrithvik K C</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Shloka Agarwal</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Aarvi</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Samiksha Kulkarni</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Navyatha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Nakshathra</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Aryahi</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Dakshith P Gowda</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Shraddha</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Laasya</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Sandeep Kamat</span>
-              <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">Atharva</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Event 4: Dabba Party -->
-        <article class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
-            <h3 class="text-base sm:text-lg font-semibold text-slate-900">
-              Dabba Party
-            </h3>
-            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">
-              14th Nov, 6:30 PM onwards
-            </span>
-          </div>
-          <p class="mt-1.5 text-sm text-slate-600">
-            Organizer: <span class="font-medium text-slate-800">Harshith &amp; Sanjay</span>
-          </p>
-        </article>
-
-        <!-- Event 5: Rangoli -->
-        <article class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
-            <h3 class="text-base sm:text-lg font-semibold text-slate-900">
-              Rangoli
-            </h3>
-            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">
-              15th Nov, 10:45 AM
-            </span>
-          </div>
-          <p class="mt-1.5 text-sm text-slate-600">
-            Organizer: <span class="font-medium text-slate-800">Padma Venkat Madam</span>
-          </p>
-        </article>
-
-        <!-- Event 6: Badminton -->
-        <article class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
-            <h3 class="text-base sm:text-lg font-semibold text-slate-900">
-              Badminton
-            </h3>
-            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">
-              15th Nov, 2:30 PM onwards
-            </span>
-          </div>
-          <p class="mt-1.5 text-sm text-slate-600">
-            Organizer: <span class="font-medium text-slate-800">Vignesh</span>
-          </p>
-        </article>
-
-      </div>
+      <div id="upcoming-container" class="space-y-4"></div>
     </section>
 
     <!-- 4. In Planning Events -->
     <section aria-labelledby="planning-heading" class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
       <div class="flex items-center gap-2.5 mb-4">
         <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-        <h2 id="planning-heading" class="text-lg font-semibold text-slate-900">
-          In Planning Events
-        </h2>
+        <h2 id="planning-heading" class="text-lg font-semibold text-slate-900">In Planning Events</h2>
       </div>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">Throwball</span>
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">Cricket</span>
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">Table Tennis</span>
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">Treasure Hunt</span>
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">Snooker</span>
-        <span class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium">Football</span>
-      </div>
+      <div id="planning-container" class="flex flex-wrap gap-2"></div>
     </section>
 
   </main>
+
+  <!-- Rendering Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const data = JSON.parse(document.getElementById("event-data").textContent);
+
+      // Header
+      document.getElementById("page-title").textContent = data.title;
+      document.getElementById("header-title").textContent = data.title;
+      document.getElementById("header-updated").textContent = `Last updated: ${data.lastUpdated}`;
+
+      // Completed Events
+      const completedContainer = document.getElementById("completed-container");
+      data.completedEvents.forEach(event => {
+        const span = document.createElement("span");
+        span.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium";
+        span.textContent = event;
+        completedContainer.appendChild(span);
+      });
+
+      // Ongoing Events
+      const ongoingContainer = document.getElementById("ongoing-container");
+      data.ongoingEvents.forEach(event => {
+        const span = document.createElement("span");
+        span.className = "px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/70 text-sm font-medium";
+        span.textContent = event;
+        ongoingContainer.appendChild(span);
+      });
+
+      // Upcoming Events
+      const upcomingContainer = document.getElementById("upcoming-container");
+      data.upcomingEvents.forEach(event => {
+        const article = document.createElement("article");
+        article.className = "bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm";
+
+        let participantsHTML = "";
+        if (event.participants && event.participants.length > 0) {
+          const participantBadges = event.participants.map(p => 
+            `<span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">${p}</span>`
+          ).join("");
+
+          participantsHTML = `
+            <div class="mt-4 pt-4 border-t border-slate-100">
+              <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2.5">
+                Participants (${event.participants.length})
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                ${participantBadges}
+              </div>
+            </div>
+          `;
+        }
+
+        article.innerHTML = `
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
+            <h3 class="text-base sm:text-lg font-semibold text-slate-900">${event.name}</h3>
+            <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">${event.dateTime}</span>
+          </div>
+          <p class="mt-1.5 text-sm text-slate-600">
+            Organizer: <span class="font-medium text-slate-800">${event.organizer}</span>
+          </p>
+          ${participantsHTML}
+        `;
+        upcomingContainer.appendChild(article);
+      });
+
+      // Planning Events
+      const planningContainer = document.getElementById("planning-container");
+      data.planningEvents.forEach(event => {
+        const span = document.createElement("span");
+        span.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium";
+        span.textContent = event;
+        planningContainer.appendChild(span);
+      });
+    });
+  </script>
 
 </body>
 </html>
