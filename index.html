@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title id="page-title">ASP Kreedothsav &amp; Kala Taranga November 2026! 🏆</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="page-title">ASP Kreedothsav &amp; Kala Taranga November 2026! 🏆</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
 </head>
+
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen">
 
-  <!-- Embedded JSON Data -->
-  <script id="event-data" type="application/json">
+    <!-- Embedded JSON Data -->
+    <script id="event-data" type="application/json">
     {
       "title": "ASP Kreedothsav & Kala Taranga November 2026! 🏆",
-      "lastUpdated": "November 12, 2026",
+      "lastUpdated": "November 13, 2026",
       "completedEvents": [
         "Chess kids",
         "Volleyball mens"
@@ -51,22 +53,22 @@
         },
         {
           "name": "Public Speaking",
-          "dateTime": "14 Nov, 2:30 PM",
+          "dateTime": "14 Nov, 3:30 PM",
           "organizer": "Vijayan Sir",
           "participants": [
             "Shloka Agarwal", "Laksh", "Leisha", "Sudhanva",
             "Aarna Kulkarni", "Navyatha", "Nikita", "Shraddha",
-            "Laasya", "Iyra"
+            "Laasya", "Iyra", "Sujay"
           ]
         },
         {
           "name": "Shloka recitation",
-          "dateTime": "14 Nov, 3:00 PM",
+          "dateTime": "14 Nov, 4:00 PM",
           "organizer": "Padma Venkat Madam",
           "participants": [
             "Hrithvik K C", "Shloka Agarwal", "Aarvi", "Samiksha Kulkarni",
             "Navyatha", "Nakshathra", "Aryahi", "Dakshith P Gowda",
-            "Shraddha", "Laasya", "Sandeep Kamat", "Atharva"
+            "Shraddha", "Laasya", "Sandeep Kamat", "Atharva", "Sanvi Naren"
           ]
         },
         {
@@ -100,96 +102,106 @@
     }
   </script>
 
-  <!-- Dark Header -->
-  <header class="bg-slate-900 text-white py-8 px-4 sm:px-6 border-b border-slate-800">
-    <div class="max-w-3xl mx-auto">
-      <h1 id="header-title" class="text-2xl sm:text-3xl font-bold tracking-tight leading-snug"></h1>
-      <p id="header-updated" class="mt-2 text-xs sm:text-sm text-slate-400 font-medium"></p>
-    </div>
-  </header>
+    <!-- Dark Header -->
+    <header class="bg-slate-900 text-white py-8 px-4 sm:px-6 border-b border-slate-800">
+        <div class="max-w-3xl mx-auto">
+            <h1 id="header-title" class="text-2xl sm:text-3xl font-bold tracking-tight leading-snug"></h1>
+            <p id="header-updated" class="mt-2 text-xs sm:text-sm text-slate-400 font-medium"></p>
+        </div>
+    </header>
 
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-8">
 
-    <!-- 1. Completed Events -->
-    <section aria-labelledby="completed-heading" class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-        <h2 id="completed-heading" class="text-lg font-semibold text-slate-900">Completed Events</h2>
-      </div>
-      <div id="completed-container" class="flex flex-wrap gap-2"></div>
-    </section>
+        <!-- 1. Completed Events -->
+        <section aria-labelledby="completed-heading"
+            class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+            <div class="flex items-center gap-2.5 mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <h2 id="completed-heading" class="text-lg font-semibold text-slate-900">Completed Events</h2>
+            </div>
+            <div id="completed-container" class="flex flex-wrap gap-2"></div>
+        </section>
 
-    <!-- 2. On going -->
-    <section aria-labelledby="ongoing-heading" class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-        <h2 id="ongoing-heading" class="text-lg font-semibold text-slate-900">On going</h2>
-      </div>
-      <div id="ongoing-container" class="flex flex-wrap gap-2"></div>
-    </section>
+        <!-- 2. On going -->
+        <section aria-labelledby="ongoing-heading"
+            class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+            <div class="flex items-center gap-2.5 mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                <h2 id="ongoing-heading" class="text-lg font-semibold text-slate-900">On going</h2>
+            </div>
+            <div id="ongoing-container" class="flex flex-wrap gap-2"></div>
+        </section>
 
-    <!-- 3. Upcoming Events -->
-    <section aria-labelledby="upcoming-heading" class="space-y-4">
-      <div class="flex items-center gap-2.5 px-1">
-        <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
-        <h2 id="upcoming-heading" class="text-lg font-semibold text-slate-900">Upcoming Events</h2>
-      </div>
-      <div id="upcoming-container" class="space-y-4"></div>
-    </section>
+        <!-- 3. Upcoming Events -->
+        <section aria-labelledby="upcoming-heading" class="space-y-4">
+            <div class="flex items-center gap-2.5 px-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>
+                <h2 id="upcoming-heading" class="text-lg font-semibold text-slate-900">Upcoming Events</h2>
+            </div>
+            <div id="upcoming-container" class="space-y-4"></div>
+        </section>
 
-    <!-- 4. In Planning Events -->
-    <section aria-labelledby="planning-heading" class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
-      <div class="flex items-center gap-2.5 mb-4">
-        <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
-        <h2 id="planning-heading" class="text-lg font-semibold text-slate-900">In Planning Events</h2>
-      </div>
-      <div id="planning-container" class="flex flex-wrap gap-2"></div>
-    </section>
+        <!-- 4. In Planning Events -->
+        <section aria-labelledby="planning-heading"
+            class="bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm">
+            <div class="flex items-center gap-2.5 mb-4">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                <h2 id="planning-heading" class="text-lg font-semibold text-slate-900">In Planning Events</h2>
+            </div>
+            <div id="planning-container" class="flex flex-wrap gap-2"></div>
+        </section>
 
-  </main>
 
-  <!-- Rendering Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const data = JSON.parse(document.getElementById("event-data").textContent);
+        <div class="text-sm">
+            <h2 class="font-semibold text-slate-900">Note:</h2>
+            <div>Several of our upcoming events are currently seeking sponsorship, and even a small contribution from
+                you could help make them a grand success.</div>
+        </div>
 
-      // Header
-      document.getElementById("page-title").textContent = data.title;
-      document.getElementById("header-title").textContent = data.title;
-      document.getElementById("header-updated").textContent = `Last updated: ${data.lastUpdated}`;
+    </main>
 
-      // Completed Events
-      const completedContainer = document.getElementById("completed-container");
-      data.completedEvents.forEach(event => {
-        const span = document.createElement("span");
-        span.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium";
-        span.textContent = event;
-        completedContainer.appendChild(span);
-      });
+    <!-- Rendering Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const data = JSON.parse(document.getElementById("event-data").textContent);
 
-      // Ongoing Events
-      const ongoingContainer = document.getElementById("ongoing-container");
-      data.ongoingEvents.forEach(event => {
-        const span = document.createElement("span");
-        span.className = "px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/70 text-sm font-medium";
-        span.textContent = event;
-        ongoingContainer.appendChild(span);
-      });
+            // Header
+            document.getElementById("page-title").textContent = data.title;
+            document.getElementById("header-title").textContent = data.title;
+            document.getElementById("header-updated").textContent = `Last updated: ${data.lastUpdated}`;
 
-      // Upcoming Events
-      const upcomingContainer = document.getElementById("upcoming-container");
-      data.upcomingEvents.forEach(event => {
-        const article = document.createElement("article");
-        article.className = "bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm";
+            // Completed Events
+            const completedContainer = document.getElementById("completed-container");
+            data.completedEvents.forEach(event => {
+                const span = document.createElement("span");
+                span.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium";
+                span.textContent = event;
+                completedContainer.appendChild(span);
+            });
 
-        let participantsHTML = "";
-        if (event.participants && event.participants.length > 0) {
-          const participantBadges = event.participants.map(p => 
-            `<span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">${p}</span>`
-          ).join("");
+            // Ongoing Events
+            const ongoingContainer = document.getElementById("ongoing-container");
+            data.ongoingEvents.forEach(event => {
+                const span = document.createElement("span");
+                span.className = "px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 border border-amber-200/70 text-sm font-medium";
+                span.textContent = event;
+                ongoingContainer.appendChild(span);
+            });
 
-          participantsHTML = `
+            // Upcoming Events
+            const upcomingContainer = document.getElementById("upcoming-container");
+            data.upcomingEvents.forEach(event => {
+                const article = document.createElement("article");
+                article.className = "bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm";
+
+                let participantsHTML = "";
+                if (event.participants && event.participants.length > 0) {
+                    const participantBadges = event.participants.map(p =>
+                        `<span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs sm:text-sm">${p}</span>`
+                    ).join("");
+
+                    participantsHTML = `
             <div class="mt-4 pt-4 border-t border-slate-100">
               <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2.5">
                 Participants (${event.participants.length})
@@ -199,9 +211,9 @@
               </div>
             </div>
           `;
-        }
+                }
 
-        article.innerHTML = `
+                article.innerHTML = `
           <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
             <h3 class="text-base sm:text-lg font-semibold text-slate-900">${event.name}</h3>
             <span class="text-sm font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md w-fit">${event.dateTime}</span>
@@ -211,19 +223,20 @@
           </p>
           ${participantsHTML}
         `;
-        upcomingContainer.appendChild(article);
-      });
+                upcomingContainer.appendChild(article);
+            });
 
-      // Planning Events
-      const planningContainer = document.getElementById("planning-container");
-      data.planningEvents.forEach(event => {
-        const span = document.createElement("span");
-        span.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium";
-        span.textContent = event;
-        planningContainer.appendChild(span);
-      });
-    });
-  </script>
+            // Planning Events
+            const planningContainer = document.getElementById("planning-container");
+            data.planningEvents.forEach(event => {
+                const span = document.createElement("span");
+                span.className = "px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 text-sm font-medium";
+                span.textContent = event;
+                planningContainer.appendChild(span);
+            });
+        });
+    </script>
 
 </body>
+
 </html>
